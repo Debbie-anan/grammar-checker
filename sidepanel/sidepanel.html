@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div class="panel">
+    <header class="panel-header">
+      <h1>Grammar Checker</h1>
+      <div class="scores">
+        <div class="score-item">
+          <div class="score-circle" id="readabilityCircle">
+            <span id="readabilityScore">--</span>
+          </div>
+          <span class="score-label">Readability</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="summary" id="summary">
+      <p class="summary-text">Waiting for text input...</p>
+    </div>
+
+    <div class="manual-input">
+      <textarea id="manualText" placeholder="Paste or type text here to check..." rows="3"></textarea>
+      <button class="btn btn-check" id="manualCheck">Check Text</button>
+    </div>
+
+    <div class="actions-bar">
+      <button class="btn btn-fix-all" id="fixAll" disabled>Fix All</button>
+    </div>
+
+    <div class="issues-container" id="issuesContainer">
+      <div class="empty-state">
+        <p>Start typing in any text field to see suggestions here.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>

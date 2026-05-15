@@ -1,0 +1,7 @@
+/* Content styles are injected via Shadow DOM in floating-card.js */
+/* This file is intentionally minimal - backdrop styles are inline */
+
+[data-gc-backdrop] mark {
+  background: transparent;
+  color: transparent;
+}

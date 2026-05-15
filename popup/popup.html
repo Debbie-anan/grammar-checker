@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="header">
+      <h1>Grammar Checker</h1>
+      <label class="toggle">
+        <input type="checkbox" id="enableToggle" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <section class="section">
+      <div class="status-bar" id="statusBar">
+        <span class="status-dot status-dot--active"></span>
+        <span>Free &mdash; Powered by LanguageTool</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <label class="label">Language</label>
+      <select id="langSelect" class="input">
+        <option value="en-US">English (US)</option>
+        <option value="en-GB">English (UK)</option>
+        <option value="en-AU">English (AU)</option>
+        <option value="auto">Auto-detect</option>
+      </select>
+    </section>
+
+    <section class="section">
+      <label class="label">Check Types</label>
+      <div class="features-grid">
+        <label class="feature"><input type="checkbox" data-feature="spelling" checked> Spelling</label>
+        <label class="feature"><input type="checkbox" data-feature="grammar" checked> Grammar</label>
+        <label class="feature"><input type="checkbox" data-feature="punctuation" checked> Punctuation</label>
+        <label class="feature"><input type="checkbox" data-feature="wordChoice" checked> Word Choice</label>
+        <label class="feature"><input type="checkbox" data-feature="style" checked> Style</label>
+        <label class="feature"><input type="checkbox" data-feature="clarity" checked> Clarity</label>
+      </div>
+    </section>
+
+    <section class="section">
+      <button id="openSidePanel" class="btn btn-full">Open Side Panel</button>
+    </section>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
