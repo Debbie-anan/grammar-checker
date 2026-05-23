@@ -160,10 +160,7 @@
       debouncedCheck();
     });
     field.addEventListener('focus', debouncedCheck);
-    field.addEventListener('keyup', () => {
-      clearDecorations(field);
-      debouncedCheck();
-    });
+    field.addEventListener('keyup', debouncedCheck);
 
     if (field.tagName === 'TEXTAREA' || field.tagName === 'INPUT') {
       field.addEventListener('scroll', () => syncBackdropScroll(field));
@@ -268,7 +265,7 @@
   function createBackdrop(field) {
     const backdrop = document.createElement('div');
     backdrop.setAttribute('data-gc-backdrop', 'true');
-    backdrop.style.cssText = 'position:absolute;pointer-events:none;overflow:hidden;white-space:pre-wrap;word-wrap:break-word;';
+    backdrop.style.cssText = 'position:absolute;pointer-events:none;overflow:hidden;white-space:pre-wrap;word-wrap:break-word;color:transparent;';
 
     const parent = field.offsetParent || field.parentElement;
     if (parent && getComputedStyle(parent).position === 'static') {
